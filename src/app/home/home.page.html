@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      This is Header
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openTodoAlert()">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+
+    <div *ngFor="let todo of todos">
+      <ion-item>{{todo}}</ion-item>
+
+      <!-- now adding options about sliding (direction) -->
+      <ion-item-options side="right">
+        <!-- add delete button -->
+        <ion-button color="warning"><ion-icon name="trash"></ion-icon></ion-button>
+      </ion-item-options>
+    </div>
+  
+  </ion-list>
+</ion-content>
